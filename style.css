@@ -1,0 +1,175 @@
+/* Estilos para dispositivos móveis */
+@media (max-width: 768px) {
+    .background-image {
+        /* Ajuste a imagem de fundo se necessário */
+        background-size: cover;
+    }
+    .content img {
+        max-width: 100%; /* Assegura que a imagem não exceda a largura da tela */
+        height: auto; /* Mantém a proporção da imagem */
+    }
+    
+    body {
+        font-size: 16px; /* Tamanho base */
+    }
+    .main-header h1 {
+        font-size: 2em; /* Tamanho relativo */
+    }
+    
+
+    .content {
+        padding: 10px; /* Adicione algum espaço nas bordas */
+        text-align: center; /* Centraliza o texto */
+    }
+
+    .interactive img {
+        width: 150px; /* Reduz a largura da imagem interativa */
+        margin-top: -150px; /* Ajuste a posição se necessário */
+    }
+
+    #dialog-box {
+        width: 90%; /* Aumenta a largura da caixa de diálogo para ser mais responsiva */
+        left: 50%; /* Alinha ao centro */
+        transform: translate(-50%, -50%); /* Ajusta a posição central */
+    }
+
+    .main-header h1 {
+        font-size: 32px; /* Reduz o tamanho da fonte */
+    }
+
+    .content p {
+        padding: 20px; /* Reduz o padding do parágrafo */
+        font-size: 16px; /* Ajusta o tamanho da fonte */
+    }
+
+    /* Ajuste os botões na caixa de diálogo */
+    .buttons button {
+        padding: 8px 12px; /* Reduz o padding dos botões */
+    }
+}
+
+
+
+/* Definindo o fundo diretamente no body */
+html, body {
+    height: 100%; /* Garante que o body e o html ocupem toda a altura */
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-image: url('crefaz.jpg'); /* Define a imagem de fundo */
+    background-size: cover; /* Cobre todo o fundo */
+    background-position: center; /* Centraliza a imagem */
+    background-repeat: no-repeat; /* Evita repetição */
+    background-attachment: fixed; /* Mantém a imagem fixa ao dar scroll */
+    color: #333; /* Cor de texto padrão */
+}
+
+/* Cabeçalho */
+
+
+/* Ajuste do conteúdo */
+.content {
+    position: relative; /* Garante que o conteúdo esteja sobre o fundo */
+    z-index: 1;
+    text-align: center; /* Centraliza o conteúdo */
+}
+
+/* Parágrafo dentro do conteúdo */
+.content p {
+    background-color: rgba(255, 255, 255, 0.8); /* Fundo branco semitransparente */
+    color: black;
+    padding: 50px;
+    border-radius: 10px;
+    position: relative;
+    top: 100px;
+    margin: auto;
+    width: fit-content;
+}
+
+/* Título dentro do conteúdo */
+.content h3 {
+    background-color: rgba(226, 235, 243, 0.8);
+    border-radius: 5px;
+    position: relative;
+    margin: auto;
+    width: fit-content;
+}
+
+/* Imagem Interativa */
+.interactive img {
+    position: absolute; /* Define a posição como absoluta */
+    top: 30%; /* Centraliza verticalmente */
+    top: 150px;
+    right: -50px; /* Alinha no lado direito com 20px de distância */
+    z-index: 1; /* Mantém a imagem acima do fundo */
+}
+
+.interactive img {
+    width: 300px; /* Tamanho da imagem */
+    cursor: pointer;
+    border-radius: 10px;
+    transition: transform 0.3s; /* Animação ao passar o mouse */
+
+}
+
+.interactive img:hover {
+    transform: scale(1.3); /* Efeito de escala ao passar o mouse */
+}
+/* Caixa de Diálogo */
+#dialog-box {
+    position: absolute;
+    top: 50%;
+    left: 75%;
+    transform: translate(-50%, -50%);
+    background-color: #FFFFFF; /* Cor de fundo branca */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    z-index: 10;
+}
+
+#dialog-box h2 {
+    margin-bottom: 20px;
+    color: #333; /* Cor do texto dentro da caixa de diálogo */
+}
+
+/* Botões de Opção */
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    color: #FFFFFF; /* Cor do texto do botão */
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#yes-button {
+    background-color: #1E90FF; /* Cor azul para o botão "Sim" */
+}
+
+#yes-button:hover {
+    background-color: #4682B4; /* Cor mais clara ao passar o mouse */
+}
+
+#no-button {
+    background-color: #FF6347; /* Cor vermelha para o botão "Não" */
+}
+
+#no-button:hover {
+    background-color: #FF4500; /* Cor mais escura ao passar o mouse */
+}
+
+/* Classe para ocultar elementos */
+.hidden {
+    display: none;
+}
